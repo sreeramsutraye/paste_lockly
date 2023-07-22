@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PasteLockly - Share Text Snippets</title>
+  </head>
+  <body>
+    <h1>PasteLockly - Share Text Snippets</h1>
+    <form method="post">
+      {% csrf_token %}
+      <textarea
+        name="content"
+        placeholder="Enter your text here"
+        required
+      ></textarea
+      ><br />
+      <input
+        type="text"
+        name="secret_key"
+        placeholder="Optional: Enter a secret key"
+      /><br />
+      <button type="submit">Create Snippet</button>
+    </form>
+  </body>
+</html>
